@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G.E.P.S. Seguridad Privada | Kits de Cámaras de Seguridad Monterrey</title>
+  <meta name="description" content="Venta e instalación de kits de cámaras de seguridad para residencias y negocios en Monterrey y área metropolitana. Protegemos tu mundo, dentro y fuera de casa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a1628;
+      --secondary: #0d2137;
+      --accent: #c9a227;
+      --accent-light: #e8c547;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --text: #1a1a2e;
+      --blue: #1e3a5f;
+      --success: #25D366;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0a1628 0%, #0d2137 50%, #132f4c 100%);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header / Hero */
+    .hero {
+      position: relative;
+      padding: 2rem 1.5rem 3rem;
+      text-align: center;
+      background: radial-gradient(ellipse at top, rgba(201,162,39,0.15) 0%, transparent 60%);
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 110px;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(201,162,39,0.4));
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .brand-text {
+      text-align: left;
+    }
+
+    .brand-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--white);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .brand-text .subtitle {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #e0e6ed;
+      margin: 1.2rem auto 1.5rem;
+      max-width: 520px;
+      font-weight: 400;
+    }
+
+    .priority-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(201,162,39,0.4);
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(201,162,39,0.4); }
+      50% { transform: scale(1.03); box-shadow: 0 6px 20px rgba(201,162,39,0.6); }
+    }
+
+    .cta-main {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      color: var(--primary);
+      box-shadow: 0 4px 15px rgba(201,162,39,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(201,162,39,0.5);
+    }
+
+    /* Services Section */
+    .section {
+      padding: 2.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,162,39,0.25);
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      transform: scaleX(0);
+      transition: transform 0.35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.2rem;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 6px 20px rgba(201,162,39,0.35);
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: var(--accent-light);
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #c5d0dc;
+      line-height: 1.55;
+    }
+
+    .service-card ul {
+      list-style: none;
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .service-card li {
+      font-size: 0.9rem;
+      color: #c5d0dc;
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .service-card li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Kits Section */
+    .kits-section {
+      background: rgba(0,0,0,0.25);
+      border-radius: 24px;
+      margin: 1rem 1.5rem 2rem;
+      padding: 2.5rem 1.5rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .kits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .kit-card {
+      background: linear-gradient(145deg, rgba(30,58,95,0.6), rgba(10,22,40,0.8));
+      border: 1px solid rgba(201,162,39,0.3);
+      border-radius: 18px;
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .kit-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: var(--accent);
+      box-shadow: 0 15px 35px rgba(201,162,39,0.2);
+    }
+
+    .kit-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    .kit-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .kit-card .price {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0.8rem 0;
+    }
+
+    .kit-card .price span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #a0aec0;
+    }
+
+    .kit-card ul {
+      list-style: none;
+      text-align: left;
+      margin: 1.2rem 0;
+    }
+
+    .kit-card li {
+      font-size: 0.9rem;
+      color: #c5d0dc;
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .kit-card li::before {
+      content: '●';
+      color: var(--accent);
+      font-size: 0.6rem;
+    }
+
+    .kit-card .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    /* Equipment */
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .equip-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 1.2rem 0.8rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .equip-item:hover {
+      background: rgba(201,162,39,0.15);
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .equip-item .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .equip-item span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e0e6ed;
+    }
+
+    /* Benefits */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 1.2rem 0.8rem;
+    }
+
+    .benefit .icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .benefit h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      margin-bottom: 0.3rem;
+    }
+
+    .benefit p {
+      font-size: 0.8rem;
+      color: #a0aec0;
+    }
+
+    /* Contact Footer */
+    .contact-section {
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.4) 100%);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,162,39,0.3);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+    }
+
+    .contact-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+      font-size: 1rem;
+    }
+
+    .contact-info a {
+      color: var(--white);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    .qr-container {
+      margin: 1.5rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .qr-container img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      border: 3px solid var(--accent);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .qr-container span {
+      font-size: 0.85rem;
+      color: #a0aec0;
+    }
+
+    .location {
+      font-size: 0.9rem;
+      color: #a0aec0;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #6b7c8f;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer strong {
+      color: var(--accent);
+    }
+
+    /* Floating WhatsApp */
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.7);
+    }
+
+    .float-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .brand-text h1 {
+        font-size: 1.8rem;
+      }
+      .tagline {
+        font-size: 1.05rem;
+      }
+      .section-title {
+        font-size: 1.35rem;
+      }
+      .kit-card .price {
+        font-size: 1.35rem;
+      }
+      .logo {
+        width: 90px;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="logo-container">
+      <img src="logo-web.png" alt="G.E.P.S. Seguridad Privada" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1>G.E.P.S.</h1>
+        <div class="subtitle">Seguridad Privada</div>
+      </div>
+    </div>
+
+    <p class="tagline">Protegemos tu mundo,<br>dentro y fuera de casa.</p>
+
+    <div class="priority-badge">🛡️ TU SEGURIDAD ES NUESTRA PRIORIDAD</div>
+
+    <div class="cta-main">
+      <a href="https://wa.me/528135505481?text=Hola%20G.E.P.S.%2C%20me%20interesa%20un%20kit%20de%20c%C3%A1maras%20de%20seguridad%20para%20mi%20casa%2Fnegocio%20en%20Monterrey" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotiza por WhatsApp
+      </a>
+      <a href="#kits" class="btn btn-primary">
+        Ver Kits Disponibles
+      </a>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section class="section">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-subtitle">Para cámaras, circuitos cerrados y equipos de seguridad</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Mantenimiento</h3>
+        <p>Revisión, limpieza y ajustes para que tus cámaras funcionen siempre al 100%.</p>
+        <ul>
+          <li>Limpieza profesional de lentes</li>
+          <li>Ajuste de ángulos y enfoque</li>
+          <li>Verificación de grabaciones</li>
+          <li>Actualización de firmware</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Instalación</h3>
+        <p>Instalación profesional de cámaras y equipos con la mejor ubicación y conexión.</p>
+        <ul>
+          <li>Diseño de cobertura óptima</li>
+          <li>Cableado limpio y seguro</li>
+          <li>Configuración remota</li>
+          <li>Pruebas de funcionamiento</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📹</div>
+        <h3>Circuitos Cerrados</h3>
+        <p>Monitorea y graba todo lo que sucede en tiempo real desde cualquier lugar.</p>
+        <ul>
+          <li>Acceso desde celular y PC</li>
+          <li>Grabación continua o por movimiento</li>
+          <li>Alertas en tiempo real</li>
+          <li>Almacenamiento en la nube o local</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- KITS -->
+  <section class="kits-section" id="kits">
+    <h2 class="section-title">Kits de Cámaras de Seguridad</h2>
+    <p class="section-subtitle">Ideal para residencias y negocios en Monterrey y Área Metropolitana</p>
+
+    <div class="kits-grid">
+      <!-- Kit Residencial -->
+      <div class="kit-card">
+        <span class="kit-badge">Más Popular</span>
+        <h3>🏠 Kit Residencial</h3>
+        <div class="price">Desde $4,990 <span>MXN</span></div>
+        <ul>
+          <li>4 Cámaras HD / Full HD</li>
+          <li>Grabador DVR/NVR</li>
+          <li>Disco duro incluido</li>
+          <li>Acceso remoto por App</li>
+          <li>Instalación profesional</li>
+          <li>Garantía de equipos</li>
+        </ul>
+        <a href="https://wa.me/528135505481?text=Hola%2C%20me%20interesa%20el%20Kit%20Residencial%20de%20c%C3%A1maras" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          Cotizar este kit
+        </a>
+      </div>
+
+      <!-- Kit Negocio -->
+      <div class="kit-card">
+        <span class="kit-badge" style="background:#1e90ff;color:white;">Negocios</span>
+        <h3>🏪 Kit Comercial</h3>
+        <div class="price">Desde $8,990 <span>MXN</span></div>
+        <ul>
+          <li>8 Cámaras Full HD / 4K</li>
+          <li>Grabador NVR profesional</li>
+          <li>Mayor almacenamiento</li>
+          <li>Monitoreo multi-usuario</li>
+          <li>Instalación + configuración</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="https://wa.me/528135505481?text=Hola%2C%20me%20interesa%20el%20Kit%20Comercial%20para%20mi%20negocio" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          Cotizar este kit
+        </a>
+      </div>
+
+      <!-- Kit Premium -->
+      <div class="kit-card">
+        <span class="kit-badge" style="background:#9b59b6;color:white;">Premium</span>
+        <h3>🏢 Kit Empresarial</h3>
+        <div class="price">A medida</div>
+        <ul>
+          <li>16+ Cámaras 4K / IA</li>
+          <li>NVR de alta capacidad</li>
+          <li>Detección inteligente</li>
+          <li>Alarmas y sensores</li>
+          <li>Video porteros</li>
+          <li>Mantenimiento incluido</li>
+        </ul>
+        <a href="https://wa.me/528135505481?text=Hola%2C%20necesito%20un%20sistema%20empresarial%20a%20medida" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          Solicitar cotización
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPOS -->
+  <section class="section">
+    <h2 class="section-title">Equipos de Seguridad</h2>
+    <p class="section-subtitle">Trabajamos con las mejores marcas del mercado</p>
+
+    <div class="equip-grid">
+      <div class="equip-item">
+        <div class="icon">📷</div>
+        <span>Cámaras de Seguridad</span>
+      </div>
+      <div class="equip-item">
+        <div class="icon">💾</div>
+        <span>Grabadores DVR / NVR</span>
+      </div>
+      <div class="equip-item">
+        <div class="icon">🚨</div>
+        <span>Alarmas</span>
+      </div>
+      <div class="equip-item">
+        <div class="icon">📡</div>
+        <span>Sensores</span>
+      </div>
+      <div class="equip-item">
+        <div class="icon">🔔</div>
+        <span>Video Porteros</span>
+      </div>
+      <div class="equip-item">
+        <div class="icon">🔌</div>
+        <span>Accesorios y Más</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section">
+    <h2 class="section-title">¿Por qué elegirnos?</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <span class="icon">🛡️</span>
+        <h4>Protección Total</h4>
+        <p>Cobertura completa</p>
+      </div>
+      <div class="benefit">
+        <span class="icon">⭐</span>
+        <h4>Equipos de Calidad</h4>
+        <p>Marcas certificadas</p>
+      </div>
+      <div class="benefit">
+        <span class="icon">⚡</span>
+        <h4>Servicio Rápido</h4>
+        <p>Instalación ágil</p>
+      </div>
+      <div class="benefit">
+        <span class="icon">🎧</span>
+        <h4>Atención Personalizada</h4>
+        <p>Te acompañamos</p>
+      </div>
+      <div class="benefit">
+        <span class="icon">🕐</span>
+        <h4>Protección 24/7</h4>
+        <p>Siempre disponibles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact-section">
+    <div class="contact-box">
+      <h2>¿Listo para proteger lo que más importa?</h2>
+      <p style="color:#c5d0dc; margin-bottom:1rem;">Contáctanos ahora y recibe asesoría gratuita</p>
+
+      <div class="cta-main" style="margin-bottom:1.5rem;">
+        <a href="https://wa.me/528135505481?text=Hola%20G.E.P.S.%2C%20quiero%20informaci%C3%B3n%20sobre%20kits%20de%20c%C3%A1maras" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp: 81 3550 5481
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <a href="mailto:gepsdigital@gepsmexico.com">✉️ gepsdigital@gepsmexico.com</a>
+        <a href="https://www.seguridadprivadageps.com" target="_blank" rel="noopener">🌐 www.seguridadprivadageps.com</a>
+      </div>
+
+      <div class="qr-container">
+        <img src="qr2.png" alt="Escanea para contactarnos" onerror="this.style.display='none'">
+        <span>Escanea para guardar el contacto</span>
+      </div>
+
+      <p class="location">📍 Monterrey, Nuevo León y toda la República Mexicana</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><strong>G.E.P.S. Seguridad Privada</strong> — Tu tranquilidad, nuestro compromiso.</p>
+    <p style="margin-top:0.4rem;">© 2026 G.E.P.S. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/528135505481?text=Hola%20G.E.P.S.%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20kits%20de%20c%C3%A1maras" class="float-wa" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+</body>
+</html>
